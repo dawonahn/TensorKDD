@@ -1,6 +1,6 @@
 {
   "welcome": "",
-  "goals": "Tensor methods have played a central role in analyzing multi-dimensional data. Also, these methods provide low-rank representations, which enable trustworthy and parsimonious machine learning systems. However, tensor methods remain underexplored in the context of modern neural architectures and foundation models. This workshop aims to provide a forum for advancing tensor methods and applying them to various applications at the intersection of data mining and modern machine learning. This workshop also aims to bridge classical tensor methods with modern machine learning, including foundation models, representation learning, and scientific machine learning. The goal is to foster discussion between researchers working on tensor algorithms, deep learning architectures, and large-scale data-driven scientific discovery.",
+  "goals": "Tensor methods have played a central role in analyzing multi-dimensional data. Also, these methods provide low-rank representations, which enable trustworthy and parsimonious machine learning systems. However, tensor methods remain underexplored in the context of modern neural architectures and foundation models. This workshop aims to provide a forum for advancing tensor methods and applying them to various applications at the intersection of data mining and modern machine learning, including foundation models, representation learning, and scientific machine learning.",
   "scope_intro": "The topics of interest include, but are not limited to:",
   "scope": [
     {
