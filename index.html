@@ -595,7 +595,7 @@ fetch('data/overview.json')
 fetch('data/speakers.json')
   .then(r => r.json())
   .then(data => {
-    document.getElementById('speakers-list').innerHTML = data.map(makeSpeakerCard).join('');
+    document.getElementById('speakers-list').innerHTML = data.filter(s => !s.hidden).map(makeSpeakerCard).join('');
   });
 
 fetch('data/organizers.json')

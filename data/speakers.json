@@ -4,7 +4,8 @@
     "affiliation": "University of Virginia",
     "image": "images/cat.png",
     "url": "https://nikossidiropoulos.github.io/",
-    "talk": "Talk Title TBD"
+    "talk": "Talk Title TBD",
+    "hidden": true
   },
   {
     "name": "Grigoris Chrysos",
