@@ -24,7 +24,7 @@
       "description": "Any other topics involving tensor methods in machine learning."
     }
   ],
-  "after_scope": "Accepted papers will be presented as posters, with a subset selected for oral presentations. The workshop will take place in person at KDD 2026, and authors of accepted papers are required to register and attend the conference in person.",
+  "after_scope": "Accepted papers will be presented as posters, with a subset selected for oral presentations. The workshop will take place in person at KDD 2026, and authors of accepted papers are required to register and attend the conference in person. This workshop is non-archival; accepted papers will not appear in the KDD proceedings.",
   "submission_types": [
     {
       "type": "Regular Papers",
@@ -45,8 +45,8 @@
       "text": "Papers should be anonymized for double-blind review. All submissions must adhere to the ACM policies on plagiarism, misrepresentation, and falsification."
     },
     {
-      "label": "Dual-Policy (Non-Archival)",
-      "text": "Submissions may include both original and previously presented work. We welcome novel contributions as well as preliminary, ongoing, or recently published work. Work that has published or appeared in non-archival venues is allowed. Submissions under review are also allowed."
+      "label": "Dual Submission",
+      "text": "We welcome both original and previously presented work, including preliminary, ongoing, published, or work currently under review. There are no restrictions on prior publication status."
     }
   ],
   "submission_site": "Submit papers through the Submission Portal on OpenReview (link TBD). Papers will remain private during review. All authors must maintain up-to-date OpenReview profiles for conflict-of-interest management and paper matching. <a href='https://docs.openreview.net/getting-started/creating-an-openreview-profile' target='_blank'>Learn how to create an OpenReview profile here.</a>"
