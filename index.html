@@ -320,6 +320,101 @@ body {
   font-size: 13px;
 }
 
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  body { font-size: 15px; }
+
+  .navbar-inner {
+    height: 64px;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .hamburger { display: flex; }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 8px 0 12px;
+    gap: 0;
+    z-index: 200;
+  }
+
+  .navbar-links.open { display: flex; }
+
+  .navbar-links a {
+    padding: 10px 24px;
+    border-radius: 0;
+    font-size: 15px;
+  }
+
+  .hero {
+    padding: 48px 20px;
+    min-height: 180px;
+  }
+
+  .hero-inner {
+    padding: 24px 20px;
+  }
+
+  .hero h1 { font-size: 22px; }
+  .hero h3 { font-size: 14px; }
+
+  .section { padding: 48px 20px; scroll-margin-top: 70px; }
+  .hero { scroll-margin-top: 70px; }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .organizers-row3,
+  .organizers-row4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .organizer-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .speaker-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .speaker-card img {
+    width: 72px;
+    height: 72px;
+  }
+}
 </style>
 </head>
 
@@ -329,7 +424,10 @@ body {
 <div class="navbar">
 <div class="navbar-inner">
 <a class="navbar-logo" href="#home">TensorKDD 2026</a>
-<div class="navbar-links">
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
+<div class="navbar-links" id="navbar-links">
 <a href="#home">Home</a>
 <a href="#dates">Dates</a>
 <a href="#cfp">Call for Papers</a>
@@ -444,6 +542,12 @@ function setActive() {
 
 window.addEventListener('scroll', setActive);
 setActive();
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navbarLinks = document.getElementById('navbar-links');
+hamburger.addEventListener('click', () => navbarLinks.classList.toggle('open'));
+navbarLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navbarLinks.classList.remove('open')));
 
 fetch('data/overview.json')
   .then(r => r.json())
